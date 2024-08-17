@@ -39,3 +39,10 @@ touch README.md \
 cargo build
 ```
 
+## add crate for porject
+
+```bash
+cargo add chrono
+cargo add rand
+cargo build
+```

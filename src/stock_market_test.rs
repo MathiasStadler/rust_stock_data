@@ -3,6 +3,9 @@
 
 // use crate::stock_market::stock_market::StockData;
 // use super::stock_market::StockData;
+
+use num_traits::cast::ToPrimitive;
+use super::stock_market;
 use chrono::{DateTime, NaiveDateTime, TimeZone, Utc};
 use rand::Rng;
 use rust_decimal::{
@@ -16,7 +19,8 @@ use rust_decimal::{
 
 #[cfg(test)]
 //use crate::stock_market::stock_market::*;
-use examples::stock_market::*;
+//use examples::stock_market::*;
+use super::stock_market;
 
 fn generate_utc_date_from_date_string(date_string: &str) -> DateTime<Utc> {
     let day_one = NaiveDateTime::parse_from_str(date_string, "%m-%d-%Y %H:%M").unwrap();
