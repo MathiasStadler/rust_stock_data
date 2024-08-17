@@ -55,7 +55,8 @@ pub struct StockInformation {
     stock_data_series: Vec<StockData>,
 }
 
-impl StockInformation {
+// impl<T: std::convert::From<u16>> StockInformation {
+impl<T> StockInformation {
     pub fn new(company_name: String, symbol: String, stock_data_series: Vec<StockData>) -> Self {
         Self {
             company_name,
@@ -151,7 +152,8 @@ impl StockInformation {
         let first_moving_average_day = sum / ma_days_decimal;
         moving_averages.push(first_moving_average_day.round_dp(2));
 
-        if closing_prices.len() == ma_days.into() {
+        //if closing_prices.len() == ma_days.into() {
+        if closing_prices.len() == <u16 as Into<T>>::into(ma_days) {
             return Some(moving_averages);
         }
 
