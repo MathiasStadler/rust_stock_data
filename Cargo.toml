@@ -4,6 +4,10 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-chrono = "0.4.20"
+chrono = "0.4.10"
+decimal = "2.1.0"
+num-traits = "0.2.19"
+plotters = "0.3.6"
 rand = "0.8.5"
+rust_decimal_macros = "1.35.0"
 rustfmt = "0.10.0"

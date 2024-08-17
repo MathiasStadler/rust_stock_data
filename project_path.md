@@ -39,10 +39,15 @@ touch README.md \
 cargo build
 ```
 
-## add crate for porject
+## add crate for project
 
 ```bash
 cargo add chrono
 cargo add rand
+cargo add plotters
+cargo add rust_decimal
+cargo add rust_decimal_macros
+cargo add decimal
+cargo add num_traits
 cargo build
 ```
